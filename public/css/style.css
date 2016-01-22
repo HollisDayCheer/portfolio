@@ -1,0 +1,33 @@
+/*PUT YOUR STYLES HERE*/
+
+.jamepic {
+	height: 550px; /* you can use % */
+    width: auto;
+}
+
+div.all-james {
+	text-align: center;
+}	
+
+.card-text {
+	font-size: 16px;
+}
+
+.like-button {
+	float: left;
+}
+
+.dislike-button {
+	float: right;
+}
+
+.navbar {
+	background-color:  #d9534f;
+	border-color: #d9534f;
+}
+.navbar a.navbar-brand{
+	color: white;
+}
+.navbar-nav>li>a.dropdown-toggle{
+	color: white;
+}

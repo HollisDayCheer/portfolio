@@ -1,0 +1,9 @@
+<h3 class='pull-left'>Users</h3>
+<ul class='list-group'>
+  <li ng-repeat="user in users" class='list-group-item'>
+    <a ui-sref="userShow({user_id: user.id})">{{user.bio}}</a>
+    <a href="#" class='pull-right' ng-click="delete(user)">
+      <i class='icon ion-close-circled'></i>
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,29 @@
+<div class="container all-james">
+	<div class = 'enter' ng-show = '!jame'>
+		<button class="btn btn-success" ng-click = 'likeJame()'>Enter</button>
+	</div>
+
+	<div class = 'james-index' ng-show="jame">
+		  <div class="row">
+			  <div class="col-xs-12">
+			  	<div class='card'>
+			  		<div class='card-block'>
+				    	<img class="jamepic" align="middle" src="{{jame.image}}">
+				    	<h3 class='card-name'>{{jame.username}}, {{jame.age}}</h3>
+				    	<p class='card-text'>{{jame.bio}}</p>
+			  		</div>
+				</div>
+			  </div>
+		  </div>
+		  <div class="row">
+		  	<div class="col-xs-6">
+		  		<button class = '{{classes.shake}} animated btn btn-danger dislike-button' ng-click="dislikeJame(jame)"><i class="ion-close-round"></i> Nope</button>
+		  	</div>
+		  	<div class="col-xs-6">
+			  	<button class = 'btn btn-success like-button' ng-click='likeJame(jame)'><i class="ion-heart"></i> Like</button>
+			</div>
+		  </div>
+	</div>
+
+</div>
+

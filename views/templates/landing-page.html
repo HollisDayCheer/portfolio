@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jamedr</title>
+    <!-- Custom CSS -->
+    <link href="css/landing.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <button id="login-button" type="button" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#login-modal">Log In</button>
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Jamedr</h1><br>
+            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>A site for Jamey.</h2><br>
+                    <p class="lead">What's the hardest thing about today's dating websites? Competition.<br> Jamedr was created by Jamey for Jamey to solve that problem.</p>
+                    <p class="lead">More on the magnificent <a href="#callout">Jamey Hollis</a>.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Testimonials</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="service-item">
+                                <img src="/images/josh.png">
+                                <h4>
+                                    <strong>Josh Shin</strong><br>
+                                </h4>
+                                <p>"I was so nervous, but Jamey was the perfect gentleman."</p><br>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="service-item">
+                                <img src="/images/dani.png">
+                                <h4>
+                                    <strong>Dani Zaghian</strong><br>
+                                </h4>
+                                <p>"Is this a joke?"</p><br><br>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="service-item">
+                                <img src="/images/jamey.jpeg">
+                                <h4>
+                                    <strong>Jamey Hollis</strong><br>
+                                </h4>
+                                <p>"I have had a great time using Jamedr. It's going so well."</p><br>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Callout -->
+    <aside id="callout" class="callout">
+        <div class="text-vertical-center">
+            <h1>Jamey Edward Hollis</h1>
+            <a href="#portfolio" class="btn btn-dark btn-lg">See More</a>
+        </div>
+    </aside>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Different sides of Jamey</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="http://i.imgur.com/yQflKpT.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="http://i.imgur.com/KFybSSg.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="http://i.imgur.com/RY4aM8s.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="http://i.imgur.com/XkAEN1F.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Call to Action -->
+    <aside class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>Ready to start your Jamedr experience? Sign up now!</h3>
+                    <button type="button" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#signup-modal">Join Jamedr</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="modal fade" id="signup-modal" ng-controller="UsersIndexCtrl">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form ng-submit="create()">
+                    
+                        <div class="form-group">
+                            <label for="">Username</label>
+                            <input ng-model="user.username"type="text" class="form-control" placeholder="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Sex</label>
+                            <input ng-model="user.sex"type="text" class="form-control" placeholder="sex">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Age</label>
+                            <input ng-model="user.age"type="number" class="form-control" placeholder="age">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Location</label>
+                            <input ng-model="user.location"type="text" class="form-control" placeholder="location">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Bio</label>
+                            <textarea rows="4" ng-model="user.bio" class="form-control" placeholder="tell Jamey about yourself"></textarea>
+                        </div>
+
+                         <div class="text-right">
+                         <button type="submit" class="btn btn-success">Submit</button>
+                         </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Jamedr</strong>
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li><i class="ion-ios-telephone"></i> (510) 407-6729</li>
+                        <li><i class="ion-android-mail"></i>  <a href="mailto:hollisjamey@gmail.com">hollisjamey@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+
+</html>
